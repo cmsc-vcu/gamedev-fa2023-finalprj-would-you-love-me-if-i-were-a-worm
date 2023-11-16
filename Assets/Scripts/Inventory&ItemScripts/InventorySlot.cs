@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class InventoryScript : MonoBehaviour, IDropHandler
+public class InventorySlot : MonoBehaviour, IDropHandler
 {
     public void OnDrop(PointerEventData eventData)
     {
@@ -12,7 +12,7 @@ public class InventoryScript : MonoBehaviour, IDropHandler
         if (transform.childCount == 0) 
         {
             GameObject dropped = eventData.pointerDrag;
-            DragableItem dragableItem = dropped.GetComponent<DragableItem>();
+            ItemOnScreen dragableItem = dropped.GetComponent<ItemOnScreen>();
             dragableItem.parentAfterDrag = transform;
         }
     }

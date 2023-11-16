@@ -8,7 +8,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class DragableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class ItemOnScreen : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     [Header("UI")]
     public Image image;
