@@ -58,7 +58,7 @@ public class ItemInteraction : ScriptableObject
 
     //start passive items 
     public void activatePassiveItem() {
-        //activate items in secondary attack slot
+        //activate items in passive attack slot
         if (PAttack == PassiveAttack.increaseMoveSpeed) {
             MutagenManager.instance.increaseMoveSpeed();
         }
@@ -67,7 +67,7 @@ public class ItemInteraction : ScriptableObject
         }
     }
     public void resetPassiveAttack(PassiveAttack attack) {
-        //reset whatever stat the last secondary attack item was altering - needs rework if we make multiple items of the same kind
+        //reset whatever stat the last passive attack item was altering - needs rework if we make multiple items of the same kind
         if (attack == PassiveAttack.increaseMoveSpeed) {
             MutagenManager.instance.resetMoveSpeed();
         }

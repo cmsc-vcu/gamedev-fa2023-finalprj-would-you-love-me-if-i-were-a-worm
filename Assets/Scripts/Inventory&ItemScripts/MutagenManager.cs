@@ -39,7 +39,7 @@ public class MutagenManager : MonoBehaviour {
             lastMAItem = GetItem(0);
             resetMA = false;
         }
-        else if(resetMA == false) {
+        else if (lastMAItem != null && resetMA == false) {
             lastMAItem.resetMainAttack(lastMAItem.MAttack);
             resetMA = true;
         }
@@ -49,7 +49,7 @@ public class MutagenManager : MonoBehaviour {
             lastSAItem = GetItem(1);
             resetSA = false;
         }
-        else if(resetSA == false){
+        else if(lastSAItem != null && resetSA == false){
             lastSAItem.resetSecondaryAttack(lastSAItem.SAttack);
             resetSA = true;
         }
@@ -59,7 +59,7 @@ public class MutagenManager : MonoBehaviour {
             lastPAItem = GetItem(2);
             resetPA = false;
         }
-        else if (resetPA == false) {
+        else if (lastPAItem != null && resetPA == false) {
             lastPAItem.resetPassiveAttack(lastPAItem.PAttack);
             resetPA = true;
         }
