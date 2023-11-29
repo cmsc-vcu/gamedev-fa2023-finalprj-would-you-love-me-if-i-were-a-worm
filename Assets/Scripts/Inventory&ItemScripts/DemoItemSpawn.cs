@@ -17,7 +17,8 @@ public class DemoItemSpawn : MonoBehaviour {
         }
     }
     public void GetItemInAttackSlot() {
-        ItemInteraction mainAttack = mutagenManager.GetMainAttackItem();
+        //item 0 is main attack, 1 is secondary attack, 2 is passive attack, 3 is main defence and so on
+        ItemInteraction mainAttack = mutagenManager.GetItem(0);
         if(mainAttack != null) {
             Debug.Log("Main Attack: " + mainAttack);
         }
