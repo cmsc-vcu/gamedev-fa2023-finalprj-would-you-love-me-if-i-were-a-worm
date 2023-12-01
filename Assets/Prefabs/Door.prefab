@@ -60,7 +60,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.26774392, w: 0.9634901}
   m_LocalPosition: {x: 7.63, y: -6.83, z: 0}
-  m_LocalScale: {x: 2, y: 0.25, z: 1}
+  m_LocalScale: {x: 1.333333, y: 0.16666667, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2147127822397522215}
@@ -175,3 +175,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a5e27d54e5102549903c67fef704250, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisCamera: {fileID: 0}
+  newCamera: {fileID: 0}
+  newPositionTarget: {fileID: 0}
