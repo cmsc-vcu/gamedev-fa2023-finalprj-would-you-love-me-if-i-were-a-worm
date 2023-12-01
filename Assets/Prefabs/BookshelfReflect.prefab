@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5923223672536166832}
   - component: {fileID: 4635889736475600320}
   m_Layer: 0
-  m_Name: Bookshelf
+  m_Name: BookshelfReflect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: e65ce75bd04ab7141b37cf1ccf474c10, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 27.324455, y: 20.48}
@@ -120,11 +120,11 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 3.4245725, y: -7.153673}
-  - {x: -5.832555, y: -1.848977}
-  - {x: -2.4450643, y: -0.09750605}
-  - {x: 6.47004, y: -5.4570456}
-  - {x: 3.4101467, y: -7.1536727}
+  - {x: 5.7958264, y: -1.8023267}
+  - {x: -3.3651705, y: -7.200323}
+  - {x: -6.546694, y: -5.4488463}
+  - {x: 2.8170283, y: 0.022474766}
+  - {x: 5.8134475, y: -1.7702827}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0

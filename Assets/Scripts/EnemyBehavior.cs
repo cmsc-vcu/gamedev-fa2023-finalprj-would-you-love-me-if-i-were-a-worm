@@ -14,7 +14,15 @@ public class EnemyBehavior : MonoBehaviour
     private float distance;
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.CompareTag("Player")) {
+        /**if (collision.CompareTag("Player")) {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }*/
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -20,12 +21,19 @@ public class WormControl : MonoBehaviour
     void Update()
     {
         transform.position += (Vector3)move * Time.deltaTime * moveSpeed;
+        if (move.x > 0 && self.localScale.x < 0)
+        {
+            self.localScale = new Vector3 (-1 * transform.localScale.x, transform.localScale.y, transform.localScale.z);
+        }
+        if (move.x < 0 && self.localScale.x > 0)
+        {
+            self.localScale = new Vector3(-1 * transform.localScale.x, transform.localScale.y, transform.localScale.z);
+        }
     }
 
     void OnMove(InputValue value)
     {
         move = value.Get<Vector2>();
-
     }
 
     void OnInteract()
@@ -46,6 +54,7 @@ public class WormControl : MonoBehaviour
             Debug.Log("Can interact");
         }
     }
+
 
     private void OnTriggerExit2D(Collider2D collision)
     {
