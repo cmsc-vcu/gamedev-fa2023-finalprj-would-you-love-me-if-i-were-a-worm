@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -20,11 +21,20 @@ public class WormControl : MonoBehaviour
     void Update()
     {
         transform.position += (Vector3)move * Time.deltaTime * moveSpeed;
+        
     }
 
     void OnMove(InputValue value)
     {
         move = value.Get<Vector2>();
+        float moveAxis = Input.GetAxis("Horizontal");
+        if (moveAxis > 0){
+            transform.Rotate(0, 180, 0);
+        }
+        if (moveAxis < 0){
+            transform.Rotate(0, 0, 310);
+        }
+        
     }
 
     void OnInteract()
