@@ -25,6 +25,7 @@ public class WormControl : MonoBehaviour
     void OnMove(InputValue value)
     {
         move = value.Get<Vector2>();
+
     }
 
     void OnInteract()
