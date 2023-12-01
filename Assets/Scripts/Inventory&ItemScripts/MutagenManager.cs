@@ -5,18 +5,22 @@ using UnityEngine;
 public class MutagenManager : MonoBehaviour {
     //for making MutagenMaganer accessible everywhere
     public static MutagenManager instance;
+    //for changing enemy variables 
+    public GlobalEnemyVariables enemyVariables;
 
     //for storing ever item for easy equivalencies later
     public ItemInteraction[] allItems;
-    
+
     //for accessing the players variables like moveSpeed
     public WormControl worm;
-    
+
     //for getting which item is in each slot 
     public InventorySlot[] inventoryslots;
-    
+
     //so that we can change the base move speed on the player and not in the script 
     private float baseMoveSpeed;
+    private float baseDetectionRadius;
+    private float baseEnemyMoveSpeed;
 
     private ItemInteraction lastMAItem;
     private bool resetMA = false;
@@ -30,6 +34,8 @@ public class MutagenManager : MonoBehaviour {
     private void Awake() {
         instance = this;
         baseMoveSpeed = worm.moveSpeed;
+        baseDetectionRadius = enemyVariables.detectionRadius;
+        baseEnemyMoveSpeed = enemyVariables.moveSpeed;
     }
 
     private void Update() {
@@ -65,7 +71,7 @@ public class MutagenManager : MonoBehaviour {
         }
 
     }
-    //gets the mutagen slots in order of mainAttack, secondaryAttack, passiveAttack, mainDefence, secondaryDefence, passiveDefence, those being 0-5 in array respectively 
+    //gets the mutagen slots in order of mainAttack, secondaryAttack, passiveAttack, those being 0-2 in array respectively 
     public ItemInteraction GetItem(int num) {
         InventorySlot slot = inventoryslots[num];
         ItemOnScreen itemInSlot = slot.GetComponentInChildren<ItemOnScreen>();
@@ -87,6 +93,18 @@ public class MutagenManager : MonoBehaviour {
     }
     public void resetSize() {
         worm.transform.localScale = new Vector3((float)1.5, (float)0.5, 1);
+    }
+    public void decreaseEnemySpeed() {
+        enemyVariables.moveSpeed = 3;
+    }
+    public void resetEnemySpeed() {
+        enemyVariables.moveSpeed = baseEnemyMoveSpeed;
+    }
+    public void decreaseEnemyDetectionRadius() {
+        enemyVariables.detectionRadius = 4;
+    }
+    public void resetEnemyDetectionRadius() {
+        enemyVariables.detectionRadius = baseDetectionRadius; 
     }
 
 }
