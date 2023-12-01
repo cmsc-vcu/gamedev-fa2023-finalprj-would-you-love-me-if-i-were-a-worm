@@ -8,10 +8,15 @@ using UnityEngine.SceneManagement;
 public class EnemyBehavior : MonoBehaviour
 {
     public GameObject player;
-    public float speed;
-    public float detectionRadius;
+    private float speed;
+    private float detectionRadius;
 
     private float distance;
+
+    private void Start() {
+        speed = MutagenManager.instance.enemyVariables.moveSpeed;
+        detectionRadius = MutagenManager.instance.enemyVariables.detectionRadius;
+    }
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.CompareTag("Player")) {
@@ -22,6 +27,8 @@ public class EnemyBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        speed = MutagenManager.instance.enemyVariables.moveSpeed;
+        detectionRadius = MutagenManager.instance.enemyVariables.detectionRadius;
         distance = Vector2.Distance(transform.position, player.transform.position);
         Vector2 direction = player.transform.position - transform.position;
         direction.Normalize();
