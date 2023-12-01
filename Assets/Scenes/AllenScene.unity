@@ -2504,6 +2504,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6340330497783356144, guid: ae504c68cffc92745ba082a8d845a2c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7736299135630167886, guid: ae504c68cffc92745ba082a8d845a2c1, type: 3}
       propertyPath: m_Name
       value: WormPlayer
