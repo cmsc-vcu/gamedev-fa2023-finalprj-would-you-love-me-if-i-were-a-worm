@@ -41,7 +41,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5279883268081309946}
   - component: {fileID: 101978007045827078}
-  - component: {fileID: 7112116711889834195}
   - component: {fileID: 1588334604831630197}
   m_Layer: 0
   m_Name: Door
@@ -59,11 +58,12 @@ Transform:
   m_GameObject: {fileID: 3279388458062176201}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2147127822397522215}
+  - {fileID: 2990104314321850748}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &101978007045827078
@@ -106,7 +106,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 12
   m_Sprite: {fileID: 21300000, guid: 30993730562c94f69ba996f9edc53c63, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -118,13 +118,61 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &7112116711889834195
-BoxCollider2D:
+--- !u!114 &1588334604831630197
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3279388458062176201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a5e27d54e5102549903c67fef704250, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisCameraObj: {fileID: 0}
+  newCameraObj: {fileID: 0}
+  newPositionTarget: {fileID: 0}
+--- !u!1 &5121604476589171105
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2990104314321850748}
+  - component: {fileID: 227958584069719099}
+  - component: {fileID: 8442681204940736370}
+  m_Layer: 0
+  m_Name: Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2990104314321850748
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5121604476589171105}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0.2559515, w: 0.96668965}
+  m_LocalPosition: {x: -0.212, y: -1.288, z: 0}
+  m_LocalScale: {x: 1.3349, y: 0.2125, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5279883268081309946}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -29.66}
+--- !u!61 &227958584069719099
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5121604476589171105}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -153,28 +201,26 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 26.91, y: 20.484713}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1588334604831630197
+--- !u!114 &8442681204940736370
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3279388458062176201}
+  m_GameObject: {fileID: 5121604476589171105}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a5e27d54e5102549903c67fef704250, type: 3}
+  m_Script: {fileID: 11500000, guid: 334e9f52f78becf4f8b58cd547f37d95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thisCameraObj: {fileID: 0}
-  newCameraObj: {fileID: 0}
-  newPositionTarget: {fileID: 0}
+  parentDoor: {fileID: 0}

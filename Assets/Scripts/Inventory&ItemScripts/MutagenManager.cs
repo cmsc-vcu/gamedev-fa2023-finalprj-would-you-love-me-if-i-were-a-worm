@@ -97,10 +97,10 @@ public class MutagenManager : MonoBehaviour {
         wormDown.speed = 1;
     }
     public void decreaseSize() {
-        worm.transform.localScale = new Vector3((float)0.75, (float)0.25, 1);
+        worm.transform.localScale = new Vector3(0.4f, 0.4f, 1);
     }
     public void resetSize() {
-        worm.transform.localScale = new Vector3((float)1.5, (float)0.5, 1);
+        worm.transform.localScale = new Vector3(1, 1, 1);
     }
     public void decreaseEnemySpeed() {
         enemyVariables.moveSpeed = 3;
