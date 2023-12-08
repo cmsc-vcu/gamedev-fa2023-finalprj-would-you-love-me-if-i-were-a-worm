@@ -1,9 +1,15 @@
-# gamedev-fa2023-finalprj-template
+CMSC391/COAR463 Game Development - Final Project
 
-This is the repository placeholder for the GAMEDEV final project.
+Interactive one level Unity game "would you love me if i were a worm?" README.
 
-Please update this readme with your team name, team members and other project particulars.
+WEBGL Link: https://play.unity.com/mg/other/webgl-builds-380929
 
-See:
+Controls: WASD or Arrow keys to move, use Left Mouse Button to click on the inventory menu and open the inventory. 
 
-https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/
+Game Description: 
+
+Project Details: This is an entire Unity project, so to run it on your own machine you only need to download it and open the folder in Unity Hub. Any tutorials used in the creation of this game can be found in the Production PDF
+
+Credits: A game made by Allen Lee, Peter Trafelet, Tristan Weigand, and Moses Farley.
+
+Assets used: All assets were created by team members. 

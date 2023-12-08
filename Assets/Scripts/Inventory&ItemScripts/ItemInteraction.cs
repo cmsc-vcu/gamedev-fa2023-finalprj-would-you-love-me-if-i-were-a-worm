@@ -14,7 +14,6 @@ public class ItemInteraction : ScriptableObject
     [Header("In Game Sprite")]
     public Sprite image;
 
-    //to make the second triangle, add a parameter along the lines of "attack" and "defence", and an if statement where it activates attack items if param is attacks
     //start main items 
     public void activateMainItem() {
         
@@ -25,6 +24,12 @@ public class ItemInteraction : ScriptableObject
         if (MAttack == MainAttack.decreaseSize) {
             MutagenManager.instance.decreaseSize();
         }
+        if (MAttack == MainAttack.detectionRadius) {
+            MutagenManager.instance.decreaseEnemyDetectionRadius();
+        }
+        if (MAttack == MainAttack.enemyMoveSpeed) {
+            MutagenManager.instance.decreaseEnemySpeed();
+        }
     }
     public void resetMainAttack(MainAttack attack) {
         //reset whatever stat the last main attack item was altering - needs rework if we make multiple items of the same kind
@@ -33,6 +38,12 @@ public class ItemInteraction : ScriptableObject
         }
         else if (attack == MainAttack.decreaseSize) {
             MutagenManager.instance.resetSize();
+        }
+        else if (attack == MainAttack.detectionRadius) {
+            MutagenManager.instance.resetEnemyDetectionRadius();
+        }
+        else if (attack == MainAttack.enemyMoveSpeed) {
+            MutagenManager.instance.resetEnemySpeed();
         }
     }
 
@@ -45,6 +56,12 @@ public class ItemInteraction : ScriptableObject
         if (SAttack == SecondaryAttack.decreaseSize) {
             MutagenManager.instance.decreaseSize();
         }
+        if (SAttack == SecondaryAttack.detectionRadius) {
+            MutagenManager.instance.decreaseEnemyDetectionRadius();
+        }
+        if (SAttack == SecondaryAttack.enemyMoveSpeed) {
+            MutagenManager.instance.decreaseEnemySpeed();
+        }
     }
     public void resetSecondaryAttack(SecondaryAttack attack) {
         //reset whatever stat the last secondary attack item was altering - needs rework if we make multiple items of the same kind
@@ -53,6 +70,12 @@ public class ItemInteraction : ScriptableObject
         }
         else if (attack == SecondaryAttack.decreaseSize) {
             MutagenManager.instance.resetSize();
+        }
+        else if (attack == SecondaryAttack.detectionRadius) {
+            MutagenManager.instance.resetEnemyDetectionRadius();
+        }
+        else if (attack == SecondaryAttack.enemyMoveSpeed) {
+            MutagenManager.instance.resetEnemySpeed();
         }
     }
 
@@ -65,6 +88,12 @@ public class ItemInteraction : ScriptableObject
         if (PAttack == PassiveAttack.decreaseSize) {
             MutagenManager.instance.decreaseSize();
         }
+        if (PAttack == PassiveAttack.detectionRadius) {
+            MutagenManager.instance.decreaseEnemyDetectionRadius();
+        }
+        if (PAttack == PassiveAttack.enemyMoveSpeed) {
+            MutagenManager.instance.decreaseEnemySpeed();
+        }
     }
     public void resetPassiveAttack(PassiveAttack attack) {
         //reset whatever stat the last passive attack item was altering - needs rework if we make multiple items of the same kind
@@ -74,17 +103,29 @@ public class ItemInteraction : ScriptableObject
         else if (attack == PassiveAttack.decreaseSize) {
             MutagenManager.instance.resetSize();
         }
+        else if (attack == PassiveAttack.detectionRadius) {
+            MutagenManager.instance.resetEnemyDetectionRadius();
+        }
+        else if (attack == PassiveAttack.enemyMoveSpeed) {
+            MutagenManager.instance.resetEnemySpeed();
+        }
     }
 }
 public enum MainAttack {
     increaseMoveSpeed, 
-    decreaseSize
+    decreaseSize,
+    detectionRadius, 
+    enemyMoveSpeed
 }
 public enum SecondaryAttack {
     increaseMoveSpeed,
-    decreaseSize
+    decreaseSize,
+    detectionRadius,
+    enemyMoveSpeed
 }
 public enum PassiveAttack {
     increaseMoveSpeed,
-    decreaseSize
+    decreaseSize,
+    detectionRadius,
+    enemyMoveSpeed
 }

@@ -21,7 +21,18 @@ public class WormControl : MonoBehaviour
     void Update()
     {
         transform.position += (Vector3)move * Time.deltaTime * moveSpeed;
+<<<<<<< HEAD
         
+=======
+        if (move.x > 0 && self.localScale.x < 0)
+        {
+            self.localScale = new Vector3 (-1 * transform.localScale.x, transform.localScale.y, transform.localScale.z);
+        }
+        if (move.x < 0 && self.localScale.x > 0)
+        {
+            self.localScale = new Vector3(-1 * transform.localScale.x, transform.localScale.y, transform.localScale.z);
+        }
+>>>>>>> 69633125167b19faa25d46230f28af78456daf64
     }
 
     void OnMove(InputValue value)
@@ -55,6 +66,7 @@ public class WormControl : MonoBehaviour
             Debug.Log("Can interact");
         }
     }
+
 
     private void OnTriggerExit2D(Collider2D collision)
     {
