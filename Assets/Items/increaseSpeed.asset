@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd8351b7ac045cf448ef3d2fc9d2ba53, type: 3}
   m_Name: increaseSpeed
   m_EditorClassIdentifier: 
+  itemDescription: Increases Player Movement Speed
   MAttack: 0
   SAttack: 0
   PAttack: 0
