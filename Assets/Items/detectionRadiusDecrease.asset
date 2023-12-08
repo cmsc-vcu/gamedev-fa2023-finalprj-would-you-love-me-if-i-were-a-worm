@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: detectionRadiusDecrease
   m_EditorClassIdentifier: 
   itemDescription: Decreases Enemy Detection Radius
+  color: 1
   MAttack: 2
   SAttack: 2
   PAttack: 2

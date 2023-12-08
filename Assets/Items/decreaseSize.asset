@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: decreaseSize
   m_EditorClassIdentifier: 
   itemDescription: Decreases Player Size
+  color: 2
   MAttack: 1
   SAttack: 1
   PAttack: 1
