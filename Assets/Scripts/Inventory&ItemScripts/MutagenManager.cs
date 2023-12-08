@@ -17,6 +17,10 @@ public class MutagenManager : MonoBehaviour {
     //for getting which item is in each slot 
     public InventorySlot[] inventoryslots;
 
+    //For changing animator speed with move speed
+    public Animator wormUp;
+    public Animator wormDown;
+
     //so that we can change the base move speed on the player and not in the script 
     private float baseMoveSpeed;
     private float baseDetectionRadius;
@@ -83,10 +87,14 @@ public class MutagenManager : MonoBehaviour {
 
     //changes to player character happen here so each item doesnt need its own instance of the player 
     public void increaseMoveSpeed() {
-        worm.moveSpeed = baseMoveSpeed + 5;
+        worm.moveSpeed = baseMoveSpeed * 2;
+        wormUp.speed = 2;
+        wormDown.speed = 2;
     }
     public void resetMoveSpeed() {
         worm.moveSpeed = baseMoveSpeed;
+        wormUp.speed = 1;
+        wormDown.speed = 1;
     }
     public void decreaseSize() {
         worm.transform.localScale = new Vector3((float)0.75, (float)0.25, 1);

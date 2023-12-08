@@ -10,11 +10,16 @@ public class WormControl : MonoBehaviour
     public float moveSpeed = 5f;
     private GameObject interactableObject;
     public Transform self;
+    [SerializeField] private GameObject colliderUp;
+    [SerializeField] private GameObject colliderDown;
+    [SerializeField] private Renderer spriteUpRenderer;
+    [SerializeField] private Renderer spriteDownRenderer;
+    [SerializeField] private Animator spriteUpAnimator;
+    [SerializeField] private Animator spriteDownAnimator;
 
     // Start is called before the first frame update
     void Start()
     {
- //       self. = 
     }
 
     // Update is called once per frame
@@ -29,6 +34,30 @@ public class WormControl : MonoBehaviour
         {
             self.localScale = new Vector3(-1 * transform.localScale.x, transform.localScale.y, transform.localScale.z);
         }
+        if (move.y > 0 && spriteDownRenderer.enabled == true)
+        {
+            spriteDownRenderer.enabled = false;
+            colliderDown.SetActive(false);
+            spriteUpRenderer.enabled = true;
+            colliderUp.SetActive(true);
+        }
+        if (move.y < 0 && spriteUpRenderer.enabled == true)
+        {
+            spriteUpRenderer.enabled = false;
+            colliderUp.SetActive(false);
+            spriteDownRenderer.enabled = true;
+            colliderDown.SetActive(true);
+        }
+        if (move == Vector2.zero && spriteUpAnimator.enabled == true) {
+            spriteUpAnimator.enabled = false;
+            spriteDownAnimator.enabled = false;
+        }
+        if(move != Vector2.zero && spriteUpAnimator.enabled == false)
+        {
+            spriteUpAnimator.enabled = true;   
+            spriteDownAnimator.enabled = true;
+        }
+
     }
 
     void OnMove(InputValue value)

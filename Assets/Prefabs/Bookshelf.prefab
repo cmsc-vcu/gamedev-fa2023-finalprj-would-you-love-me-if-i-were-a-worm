@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 5040502041993501545}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.37, y: -0.79, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!68 &4635889736475600320
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -120,11 +120,12 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 3.4245725, y: -7.153673}
-  - {x: -5.832555, y: -1.848977}
-  - {x: -2.4450643, y: -0.09750605}
-  - {x: 6.47004, y: -5.4570456}
-  - {x: 3.4101467, y: -7.1536727}
+  - {x: 4.004524, y: -4.69989}
+  - {x: -6.3430977, y: 1.3710519}
+  - {x: -2.339171, y: 3.8024352}
+  - {x: 7.846129, y: -2.3964512}
+  - {x: 5.132001, y: -4.0341425}
+  - {x: 3.9802492, y: -4.729104}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
