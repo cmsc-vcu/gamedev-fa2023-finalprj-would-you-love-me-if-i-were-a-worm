@@ -6,6 +6,12 @@ using UnityEngine.Tilemaps;
 [CreateAssetMenu(menuName = "Scriptable object/Item")]
 public class ItemInteraction : ScriptableObject
 {
+    [Header("Description to appear in inventory")]
+    public string itemDescription;
+
+    [Header("Color of Item")]
+    public ColorEnum color;
+
     [Header("What Kind of Item Is This?")]
     public MainAttack MAttack;
     public SecondaryAttack SAttack;
@@ -128,4 +134,11 @@ public enum PassiveAttack {
     decreaseSize,
     detectionRadius,
     enemyMoveSpeed
+}
+
+public enum ColorEnum {
+    Red,
+    Yellow,
+    Green,
+    Blue
 }
