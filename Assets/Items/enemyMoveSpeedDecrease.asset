@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: enemyMoveSpeedDecrease
   m_EditorClassIdentifier: 
   itemDescription: Decreases Enemy Movement Speed
+  color: 3
   MAttack: 3
   SAttack: 3
   PAttack: 3

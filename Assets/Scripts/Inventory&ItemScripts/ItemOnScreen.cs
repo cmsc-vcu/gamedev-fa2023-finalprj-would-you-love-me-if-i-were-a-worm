@@ -19,6 +19,7 @@ public class ItemOnScreen : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
     public void InitializeItem(ItemInteraction newItem) {
         item = newItem;
         image.sprite = newItem.image;
+
     }
 
     public void OnBeginDrag(PointerEventData eventData) {

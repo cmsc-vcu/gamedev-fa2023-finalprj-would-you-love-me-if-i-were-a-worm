@@ -10,7 +10,12 @@ public class InventoryManager : MonoBehaviour
     public ItemInteraction[] startItems;
     
     public InventorySlot[] inventoryslots;
-    public GameObject inventoryItemPrefab;
+    public GameObject inventoryItemPrefabRed;
+    public GameObject inventoryItemPrefabYellow;
+    public GameObject inventoryItemPrefabBlue;
+    public GameObject inventoryItemPrefabGreen;
+
+    public Color oldColor;
     //for making an instance of inventory manager accessible from every script
     private void Awake() {
         instance = this;
@@ -36,8 +41,26 @@ public class InventoryManager : MonoBehaviour
     }
     //actually creates a scriptable item when AddItem is called and links it to the item in inventory
     void SpawnNewItem(ItemInteraction item, InventorySlot slot) {
-        GameObject newItemGo = Instantiate(inventoryItemPrefab, slot.transform);
-        ItemOnScreen itemReallyOnScreen = newItemGo.GetComponent<ItemOnScreen>();
-        itemReallyOnScreen.InitializeItem(item);
+        if (item.color == ColorEnum.Red) {
+            GameObject newItemGo = Instantiate(inventoryItemPrefabRed, slot.transform);
+            ItemOnScreen itemReallyOnScreen = newItemGo.GetComponent<ItemOnScreen>();
+            itemReallyOnScreen.InitializeItem(item);
+        }
+        else if (item.color == ColorEnum.Yellow) {
+            GameObject newItemGo = Instantiate(inventoryItemPrefabYellow, slot.transform);
+            ItemOnScreen itemReallyOnScreen = newItemGo.GetComponent<ItemOnScreen>();
+            itemReallyOnScreen.InitializeItem(item);
+        }
+        else if (item.color == ColorEnum.Green) {
+            GameObject newItemGo = Instantiate(inventoryItemPrefabGreen, slot.transform);
+            ItemOnScreen itemReallyOnScreen = newItemGo.GetComponent<ItemOnScreen>();
+            itemReallyOnScreen.InitializeItem(item);
+        }
+        else if (item.color == ColorEnum.Blue) {
+            GameObject newItemGo = Instantiate(inventoryItemPrefabBlue, slot.transform);
+            ItemOnScreen itemReallyOnScreen = newItemGo.GetComponent<ItemOnScreen>();
+            itemReallyOnScreen.InitializeItem(item);
+        }
+        
     }
 }
