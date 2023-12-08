@@ -12,7 +12,7 @@ Controls: WASD or Arrow keys to move, use Left Mouse Button to click on the inve
 
 This game was for CMSC391/COAR463, Intro to Game Development.  This is the final project for this class.  
 
-WEBGL Link: https://play.unity.com/mg/other/would_you_love_me_if_i_were_a_worm
+WEBGL Link: https://play.unity.com/mg/other/webgl-builds-381913
 
 GitHub Link: https://github.com/cmsc-vcu/gamedev-fa2023-finalprj-would-you-love-me-if-i-were-... 
 
