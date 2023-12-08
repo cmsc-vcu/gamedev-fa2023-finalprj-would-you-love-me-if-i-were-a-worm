@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4734861891066432386}
   - component: {fileID: 8488428895845176163}
-  - component: {fileID: 253827333012889076}
   m_Layer: 0
   m_Name: Bookshelf (thin) 1
   m_TagString: Untagged
@@ -30,7 +29,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 8296481362625464309}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8488428895845176163
@@ -84,14 +84,46 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!68 &253827333012889076
+  m_SpriteSortPoint: 1
+--- !u!1 &7322992253284353459
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8296481362625464309}
+  - component: {fileID: 3613679014791211958}
+  m_Layer: 0
+  m_Name: Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8296481362625464309
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7322992253284353459}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.3, y: 4.99, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4734861891066432386}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!68 &3613679014791211958
 EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5999472278628566061}
+  m_GameObject: {fileID: 7322992253284353459}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -123,8 +155,7 @@ EdgeCollider2D:
   - {x: 0.16244085, y: -5.413991}
   - {x: -3.2256517, y: -3.3380415}
   - {x: 2.553532, y: 0.4129244}
-  - {x: 6.314128, y: -1.8044099}
-  - {x: 5.9152055, y: -2.0304663}
+  - {x: 6.2840123, y: -1.8345251}
   - {x: 0.4089733, y: -5.344811}
   - {x: 0.19995561, y: -5.4706235}
   m_AdjacentStartPoint: {x: 0, y: 0}

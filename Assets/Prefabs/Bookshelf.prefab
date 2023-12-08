@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 9079821173334842553}
   - component: {fileID: 5923223672536166832}
-  - component: {fileID: 4635889736475600320}
   m_Layer: 0
   m_Name: Bookshelf
   m_TagString: Untagged
@@ -30,7 +29,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 6131342354787074824}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5923223672536166832
@@ -85,13 +85,45 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
---- !u!68 &4635889736475600320
+--- !u!1 &8135434733860252526
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6131342354787074824}
+  - component: {fileID: 3605976254277546602}
+  m_Layer: 0
+  m_Name: Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6131342354787074824
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8135434733860252526}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9079821173334842553}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!68 &3605976254277546602
 EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5040502041993501545}
+  m_GameObject: {fileID: 8135434733860252526}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -120,12 +152,11 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 4.004524, y: -4.69989}
-  - {x: -6.3430977, y: 1.3710519}
-  - {x: -2.339171, y: 3.8024352}
-  - {x: 7.846129, y: -2.3964512}
-  - {x: 5.132001, y: -4.0341425}
-  - {x: 3.9802492, y: -4.729104}
+  - {x: 0.057885796, y: -0.42129478}
+  - {x: -9.766404, y: 5.2627387}
+  - {x: -6.157028, y: 7.2964525}
+  - {x: 3.4930348, y: 1.6302639}
+  - {x: -0.0016722269, y: -0.38560832}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
