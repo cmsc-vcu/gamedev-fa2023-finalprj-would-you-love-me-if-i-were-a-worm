@@ -30,7 +30,7 @@ public class DoorCameraController : MonoBehaviour
             thisListener.enabled = false;
             newCamera.enabled = true;
             newListener.enabled = true;
-            Transform player = collision.gameObject.GetComponent<Transform>();
+            Transform player = collision.gameObject.transform.parent.transform;
             player.SetPositionAndRotation(newPosition, player.rotation);
         }
     }
